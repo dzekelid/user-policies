@@ -1,9 +1,12 @@
+---
 swagger: "2.0"
 x-collection-name: AWS Identity and Access Management
-x-complete: 1
+x-complete: 0
 info:
-  title: AWS Identity and Access Management API
+  title: AWS Identity and Access Management API List User Policies
   version: 1.0.0
+  description: Lists the names of the inline policies embedded in the specified IAM
+    user.
 schemes:
 - http
 produces:
@@ -127,35 +130,17 @@ paths:
           description: OK
       tags:
       - User Policies
-  /?Action=ListAttachedUserPolicies:
-    get:
-      summary: List Attached User Policies
-      description: Lists all managed policies that are attached to the specified IAM
-        user.
-      operationId: listAttachedUserPolicies
-      x-api-path-slug: actionlistattacheduserpolicies-get
-      parameters:
-      - in: query
-        name: Marker
-        description: Use this parameter only when paginating results and only after     you
-          receive a response indicating that the results are truncated
-        type: string
-      - in: query
-        name: MaxItems
-        description: (Optional) Use this only when paginating results to indicate
-          the     maximum number of items you want in the response
-        type: string
-      - in: query
-        name: PathPrefix
-        description: The path prefix for filtering the results
-        type: string
-      - in: query
-        name: UserName
-        description: The name (friendly name, not ARN) of the user to list attached
-          policies for
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Attached Use rPolicies
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
